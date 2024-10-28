@@ -33,13 +33,11 @@ function changeColorAction(data) {
 export function markAllComplete() {
   return {
     type: "todos/markAllComplete",
-    payload: '',
   }
 }
 export function clearCompleted() {
   return {
     type: "todos/clearCompleted",
-    payload: '',
   }
 }
 
@@ -137,24 +135,14 @@ export default function todoReducers(state = initialStates, action) {
     }
     case 'todos/markAllComplete': {
       return state.map(todo => {
-        if (todo.completed) {
-          return todo;
-        }
-        else {
-          todo.completed = true;
-          return todo;
-        }
+        todo.completed = true;
+        return todo;
       })
     }
     case 'todos/clearCompleted': {
       return state.map(todo => {
-        if (!todo.completed) {
-          return todo;
-        }
-        else {
-          todo.completed = false;
-          return todo;
-        }
+        todo.completed = false
+        return todo;
       })
     }
     default:

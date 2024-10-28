@@ -37,7 +37,7 @@ const TodoList = () => {
 	}
 
 	if (copyTodos.length == 0) {
-		return <h2>No Item Present</h2>
+		return <h3>No Item Present</h3>
 	}
 	const renderedListItems = copyTodos.map((todo) => {
 		return <TodoListItem key={todo.id} todo={todo} />
