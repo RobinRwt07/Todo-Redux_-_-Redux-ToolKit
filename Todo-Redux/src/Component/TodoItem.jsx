@@ -12,10 +12,6 @@ const TodoItem = ({ id, title, completed }) => {
 			id: id,
 			completed: !completed
 		}))
-		// dispatch(toggleComplete({
-		// 	id: id,
-		// 	completed: !completed
-		// }))
 	}
 
 	function handleDelete() {

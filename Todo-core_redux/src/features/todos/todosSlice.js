@@ -1,8 +1,7 @@
 import axios from 'axios';
 const initialStates = [];
 
-// action creators are function that return action object of specific action type
-
+// action creators
 function addNewTodoAction(data) {
   return {
     type: "todos/todoAdded",
@@ -54,7 +53,8 @@ export const fetchTodos = (dispatch) => {
   })
 }
 
-// this function is thunk creator that return thunk function
+
+// Thunk creator
 export const addNewTodo = function (text) {
   return async function addTodoThunk(dispatch) {
     try {

@@ -5,14 +5,12 @@ import { fetchTodos } from './todosSlice';
 
 const TodoList = () => {
 	const dispatch = useDispatch();
-	// use selector function accpect comparison fun as second argument which compare new value and old value and return true if both are same. and if they are same useSelector would not trigger rerender.
 	useEffect(() => {
 		dispatch(fetchTodos);
 	}, [dispatch])
 	const todos = useSelector((state) => state.todos);
 	const status = useSelector((state) => state.filters.status);
 	const colors = useSelector((state) => state.filters.colors);
-	console.log(status, colors);
 
 	let copyTodos = [...todos];
 

@@ -109,6 +109,7 @@ export const todoSlice = createSlice({
       state.length = 0;
     }
   },
+
   // this is used to handle the async operation
   extraReducers: (builder) => {
     builder.addCase(getTodosAsync.fulfilled, (state, action) => {
